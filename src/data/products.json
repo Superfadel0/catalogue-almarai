@@ -1,0 +1,470 @@
+[
+  {
+    "id": 1,
+    "name": "RAISIN SEC BLOND 5KG",
+    "barcode": "6224000997199",
+    "brand": "Premium Dried Fruits",
+    "category": "Fruits secs",
+    "image": "products/6224000997199.png"
+  },
+  {
+    "id": 2,
+    "name": "RAISIN SECS BLOND 1KG",
+    "barcode": "6224000997205",
+    "brand": "Premium Dried Fruits",
+    "category": "Fruits secs",
+    "image": "products/6224000997205.png"
+  },
+  {
+    "id": 3,
+    "name": "RAISIN SEC BRUN 1KG",
+    "barcode": "6224000997212",
+    "brand": "Premium Dried Fruits",
+    "category": "Fruits secs",
+    "image": "products/6224000997212.png"
+  },
+  {
+    "id": 4,
+    "name": "RAISIN SEC ROUGE 1KG",
+    "barcode": "6224000997229",
+    "brand": "Premium Dried Fruits",
+    "category": "Fruits secs",
+    "image": "products/6224000997229.png"
+  },
+  {
+    "id": 5,
+    "name": "LAVIDA TOUMAYA SAUCE 400ml",
+    "barcode": "6223008201574",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008201574.png"
+  },
+  {
+    "id": 6,
+    "name": "LAVIDA BBQ SAUCE 340ml",
+    "barcode": "6223008205565",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008205565.png"
+  },
+  {
+    "id": 7,
+    "name": "LAVIDA KETCHUP TOMATO 340ml",
+    "barcode": "6223008205022",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008205022.png"
+  },
+  {
+    "id": 8,
+    "name": "LAVIDA CHOCOLATE SAUCE 400ml",
+    "barcode": "6223008203196",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008203196.png"
+  },
+  {
+    "id": 9,
+    "name": "LAVIDA CARAMEL SAUCE 340ml",
+    "barcode": "6223008206340",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008206340.png"
+  },
+  {
+    "id": 10,
+    "name": "LAVIDA SWEET CHILI SAUCE 340ml",
+    "barcode": "6223008205596",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008205596.png"
+  },
+  {
+    "id": 11,
+    "name": "LAVIDA MEXICAN SAUCE 340ml",
+    "barcode": "6223008205572",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008205572.png"
+  },
+  {
+    "id": 12,
+    "name": "LAVIDA STRAWBERRY SAUCE 400ml",
+    "barcode": "6223008203219",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008203219.png"
+  },
+  {
+    "id": 13,
+    "name": "LAVIDA PIZZA SAUCE 340ml",
+    "barcode": "6223008205718",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008205718.png"
+  },
+  {
+    "id": 14,
+    "name": "LAVIDA PISTACHIO SPREAD 340ml",
+    "barcode": "6223008205053",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008205053.png"
+  },
+  {
+    "id": 15,
+    "name": "LAVIDA SAUCE ALGERIENNE 400ml",
+    "barcode": "6223008203448",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008203448.png"
+  },
+  {
+    "id": 16,
+    "name": "LAVIDA CHOCOLATE CREAM 400ml",
+    "barcode": "6223008200096",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008200096.png"
+  },
+  {
+    "id": 17,
+    "name": "LAVIDA THAI CHILI SAUCE 340ml",
+    "barcode": "6223008205602",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008205602.png"
+  },
+  {
+    "id": 18,
+    "name": "LAVIDA TAHINI SAUCE 340ml",
+    "barcode": "6223008208115",
+    "brand": "Lavida",
+    "category": "Sauces",
+    "image": "products/6223008208115.png"
+  },
+  {
+    "id": 19,
+    "name": "ALMARAI MILK FULL FAT 12*1L",
+    "barcode": "6223001878001",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223001878001.png",
+    "price": 12500
+  },
+  {
+    "id": 20,
+    "name": "ALMARAI JUICE ORANGE 12*1L",
+    "barcode": "6223007520751",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007520751.png",
+    "price": 12500
+  },
+  {
+    "id": 21,
+    "name": "ALMARAI JUICE GUAVA 12*1L",
+    "barcode": "6223007520744",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007520744.png",
+    "price": 12500
+  },
+  {
+    "id": 22,
+    "name": "ALMARAI JUICE APPLE 12*1L",
+    "barcode": "6223007521383",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007521383.png",
+    "price": 12500
+  },
+  {
+    "id": 23,
+    "name": "ALMARAI JUICE MANGO 12*1L",
+    "barcode": "6223007520720",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007520720.png",
+    "price": 12500
+  },
+  {
+    "id": 24,
+    "name": "ALMARAI JUICE PINEAPPLE 12*1L",
+    "barcode": "6223007521284",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007521284.png",
+    "price": 12500
+  },
+  {
+    "id": 25,
+    "name": "ALMARAI JUICE APPLE BOTTLE 1L",
+    "barcode": "6223007520652",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007520652.png",
+    "price": 12500
+  },
+  {
+    "id": 26,
+    "name": "ALMARAI JUICE MANGO BOTTLE 1L",
+    "barcode": "6223007520645",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007520645.png",
+    "price": 12500
+  },
+  {
+    "id": 27,
+    "name": "ALMARAI JUICE ORANGE BOTTLE 1L",
+    "barcode": "6223007520676",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007520676.png",
+    "price": 12500
+  },
+  {
+    "id": 28,
+    "name": "ALMARAI JUICE GUAVA BOTTLE 1L",
+    "barcode": "6223007520669",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007520669.png",
+    "price": 12500
+  },
+  {
+    "id": 29,
+    "name": "ALMARAI MILK STRAWBERRY 27*200ML",
+    "barcode": "6223001877202",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223001877202.png",
+    "price": 8000
+  },
+  {
+    "id": 30,
+    "name": "ALMARAI MILK BANANA 27*200ML",
+    "barcode": "6223001877172",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223001877172.png",
+    "price": 8000
+  },
+  {
+    "id": 31,
+    "name": "ALMARAI MILK CHOCOLAT 27*200ML",
+    "barcode": "6223001877165",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223001877165.png",
+    "price": 8000
+  },
+  {
+    "id": 32,
+    "name": "ALMARAI JUICE MANGO 27*235ML",
+    "barcode": "6223007520683",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007520683.png",
+    "price": 8000
+  },
+  {
+    "id": 33,
+    "name": "ALMARAI JUICE APPLE 27*235ML",
+    "barcode": "6223007520690",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007520690.png",
+    "price": 8000
+  },
+  {
+    "id": 34,
+    "name": "ALMARAI JUICE ORANGE 27*235ML",
+    "barcode": "6223007520713",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007520713.png",
+    "price": 8000
+  },
+  {
+    "id": 35,
+    "name": "ALMARAI JUICE GUAVA 27*235ML",
+    "barcode": "6223007520706",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007520706.png",
+    "price": 8000
+  },
+  {
+    "id": 36,
+    "name": "ALMARAI JUICE PINEAPPLE 27*235ML",
+    "barcode": "6223007521253",
+    "brand": "Almarai",
+    "category": "Boissons & Lait",
+    "image": "products/6223007521253.png",
+    "price": 8000
+  },
+  {
+    "id": 37,
+    "name": "V7 PINEAPPLE MALT 300ml",
+    "barcode": "6224011241076",
+    "brand": "V7",
+    "category": "Boissons énergisantes",
+    "image": "products/6224011241076.png",
+    "subtitle": "Vitamin Sparkling Drink"
+  },
+  {
+    "id": 38,
+    "name": "V7 POMEGRANATE 300ml",
+    "barcode": "6224011241069",
+    "brand": "V7",
+    "category": "Boissons énergisantes",
+    "image": "products/6224011241069.png",
+    "subtitle": "Anti-Fatigue & Immune Booster"
+  },
+  {
+    "id": 39,
+    "name": "V7 LEMON MINT 300ml",
+    "barcode": "6224011241106",
+    "brand": "V7",
+    "category": "Boissons énergisantes",
+    "image": "products/6224011241106.png",
+    "subtitle": "Anti-Stress & Immune Booster"
+  },
+  {
+    "id": 40,
+    "name": "V7 BLUEBERRY 300ml",
+    "barcode": "6224011241083",
+    "brand": "V7",
+    "category": "Boissons énergisantes",
+    "image": "products/6224011241083.png",
+    "subtitle": "Anti-Oxidant & Immune Booster"
+  },
+  {
+    "id": 41,
+    "name": "V7 PINA COLADA 300ml",
+    "barcode": "6224011241090",
+    "brand": "V7",
+    "category": "Boissons énergisantes",
+    "image": "products/6224011241090.png",
+    "subtitle": "Mental & Immune Booster"
+  },
+  {
+    "id": 42,
+    "name": "V7 PINK LEMONADE 300ml",
+    "barcode": "6224011241564",
+    "brand": "V7",
+    "category": "Boissons énergisantes",
+    "image": "products/6224011241564.png",
+    "subtitle": "Immune Support - Summer Edition"
+  },
+  {
+    "id": 43,
+    "name": "JUS BEYTI MANGO 12*1L",
+    "barcode": "6223001879114",
+    "brand": "Beyti",
+    "category": "Jus de fruits",
+    "image": "products/6223001879114.png",
+    "price": 8950
+  },
+  {
+    "id": 44,
+    "name": "JUS BEYTI GUAVA 12*1L",
+    "barcode": "6223001879121",
+    "brand": "Beyti",
+    "category": "Jus de fruits",
+    "image": "products/6223001879121.png",
+    "price": 8950
+  },
+  {
+    "id": 45,
+    "name": "JUS BEYTI ORANGE 12*1L",
+    "barcode": "6223001879138",
+    "brand": "Beyti",
+    "category": "Jus de fruits",
+    "image": "products/6223001879138.png",
+    "price": 8950
+  },
+  {
+    "id": 46,
+    "name": "JUS BEYTI COCKTAIL 12*1L",
+    "barcode": "6223001879145",
+    "brand": "Beyti",
+    "category": "Jus de fruits",
+    "image": "products/6223001879145.png",
+    "price": 8950
+  },
+  {
+    "id": 47,
+    "name": "JUS BEYTI PINEAPPLE 12*1L",
+    "barcode": "6223001879206",
+    "brand": "Beyti",
+    "category": "Jus de fruits",
+    "image": "products/6223001879206.png",
+    "price": 8950
+  },
+  {
+    "id": 48,
+    "name": "JUS BEYTI APPLE 12*1L",
+    "barcode": "6223001879107",
+    "brand": "Beyti",
+    "category": "Jus de fruits",
+    "image": "products/6223001879107.png",
+    "price": 8950
+  },
+  {
+    "id": 49,
+    "name": "JUS BEYTI MANGO 27*235ML",
+    "barcode": "6223007521239",
+    "brand": "Beyti",
+    "category": "Jus de fruits",
+    "image": "products/6223007521239.png",
+    "price": 5900
+  },
+  {
+    "id": 50,
+    "name": "JUS BEYTI APPLE 27*235ML",
+    "barcode": "6223007521192",
+    "brand": "Beyti",
+    "category": "Jus de fruits",
+    "image": "products/6223007521192.png",
+    "price": 5900
+  },
+  {
+    "id": 51,
+    "name": "JUS BEYTI COCKTAIL 27*235ML",
+    "barcode": "6223007521222",
+    "brand": "Beyti",
+    "category": "Jus de fruits",
+    "image": "products/6223007521222.png",
+    "price": 5900
+  },
+  {
+    "id": 52,
+    "name": "JUS BEYTI PINEAPPLE 27*235ML",
+    "barcode": "6223001875215",
+    "brand": "Beyti",
+    "category": "Jus de fruits",
+    "image": "products/6223001875215.png",
+    "price": 5900
+  },
+  {
+    "id": 53,
+    "name": "JUS BEYTI ORANGE 27*235ML",
+    "barcode": "6223007521208",
+    "brand": "Beyti",
+    "category": "Jus de fruits",
+    "image": "products/6223007521208.png",
+    "price": 5900
+  },
+  {
+    "id": 54,
+    "name": "JUS BEYTI GUAVA 27*235ML",
+    "barcode": "6223007521215",
+    "brand": "Beyti",
+    "category": "Jus de fruits",
+    "image": "products/6223007521215.png",
+    "price": 5900
+  }
+]
