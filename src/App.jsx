@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Search, X, Plus, Minus, ShoppingBag, FileDown, ArrowUpRight, Sparkles } from 'lucide-react'
+import { Search, X, Plus, Minus, ShoppingBag, FileDown, ArrowUpRight, Sparkles, Check } from 'lucide-react'
 import jsPDF from 'jspdf'
 import productsData from './data/products.json'
 
@@ -13,6 +13,15 @@ export default function App() {
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [cart, setCart] = useState([])
   const [cartOpen, setCartOpen] = useState(false)
+  const [toasts, setToasts] = useState([])
+
+  const pushToast = (product) => {
+    const id = Date.now() + Math.random()
+    setToasts(prev => [...prev, { id, product }])
+    setTimeout(() => {
+      setToasts(prev => prev.filter(t => t.id !== id))
+    }, 2800)
+  }
 
   // Load cart from sessionStorage on mount (won't persist forever — by design)
   useEffect(() => {
@@ -52,6 +61,7 @@ export default function App() {
       }
       return [...prev, { ...product, qty: 1 }]
     })
+    pushToast(product)
   }
 
   const updateQty = (id, delta) => {
@@ -126,6 +136,46 @@ export default function App() {
           />
         )}
       </AnimatePresence>
+
+      <ToastStack toasts={toasts} onOpenCart={() => setCartOpen(true)} />
+    </div>
+  )
+}
+
+/* ================== TOAST ================== */
+function ToastStack({ toasts, onOpenCart }) {
+  return (
+    <div className="fixed bottom-6 right-6 z-[60] flex flex-col gap-2 pointer-events-none">
+      <AnimatePresence>
+        {toasts.map(({ id, product }) => (
+          <motion.div
+            key={id}
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 40, transition: { duration: 0.25 } }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="pointer-events-auto bg-ink text-cream shadow-2xl border border-ink flex items-center gap-3 pl-3 pr-2 py-2 max-w-sm"
+          >
+            <div className="w-9 h-9 bg-terracotta flex items-center justify-center flex-shrink-0">
+              <Check size={16} />
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="font-mono text-[9px] uppercase tracking-widest text-cream/60">
+                Ajouté au devis
+              </p>
+              <p className="text-display text-sm leading-tight truncate">
+                {product.name}
+              </p>
+            </div>
+            <button
+              onClick={onOpenCart}
+              className="ml-1 px-3 py-2 bg-terracotta text-cream font-mono text-[10px] uppercase tracking-widest hover:bg-cream hover:text-ink transition-colors flex-shrink-0"
+            >
+              Voir
+            </button>
+          </motion.div>
+        ))}
+      </AnimatePresence>
     </div>
   )
 }
@@ -159,11 +209,20 @@ function Header({ cartCount, onCartClick }) {
         >
           <ShoppingBag size={16} />
           <span className="font-mono text-xs uppercase tracking-wider">Devis</span>
-          {cartCount > 0 && (
-            <span className="absolute -top-2 -right-2 bg-terracotta text-cream w-6 h-6 flex items-center justify-center text-[11px] font-bold rounded-full border-2 border-cream group-hover:bg-ink">
-              {cartCount}
-            </span>
-          )}
+          <AnimatePresence>
+            {cartCount > 0 && (
+              <motion.span
+                key={cartCount}
+                initial={{ scale: 0.4, opacity: 0 }}
+                animate={{ scale: [1.3, 1], opacity: 1 }}
+                exit={{ scale: 0, opacity: 0 }}
+                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute -top-2 -right-2 bg-terracotta text-cream w-6 h-6 flex items-center justify-center text-[11px] font-bold rounded-full border-2 border-cream group-hover:bg-ink"
+              >
+                {cartCount}
+              </motion.span>
+            )}
+          </AnimatePresence>
         </button>
       </div>
     </header>
@@ -324,13 +383,13 @@ function ProductCard({ product, index, onSelect, onAdd }) {
     >
       <button
         onClick={onSelect}
-        className="relative aspect-[4/5] bg-paper overflow-hidden mb-4 stripes border border-ink/10"
+        className="relative aspect-[4/5] bg-cream overflow-hidden mb-4 border border-ink/10"
       >
         <img
           src={resolveImg(product.image)}
           alt={product.name}
           loading="lazy"
-          className="w-full h-full object-contain p-6 img-hover"
+          className="w-full h-full object-contain p-6 img-hover product-img"
         />
         <div className="absolute top-3 left-3 font-mono text-[10px] uppercase tracking-widest bg-cream/90 px-2 py-1 backdrop-blur">
           № {String(product.id).padStart(3, '0')}
@@ -412,11 +471,11 @@ function ProductModal({ product, onClose, onAdd }) {
         </button>
 
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          <div className="aspect-square bg-paper relative stripes p-12">
+          <div className="aspect-square bg-cream relative p-12">
             <img
               src={resolveImg(product.image)}
               alt={product.name}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain product-img"
             />
             <div className="absolute top-4 left-4 font-mono text-xs uppercase tracking-widest bg-cream/90 px-3 py-1.5">
               № {String(product.id).padStart(3, '0')}
@@ -672,11 +731,11 @@ function CartDrawer({ cart, onClose, onUpdateQty, onRemove, total }) {
               <ul className="divide-y divide-ink/15">
                 {cart.map(item => (
                   <li key={item.id} className="py-4 flex gap-4">
-                    <div className="w-20 h-20 bg-paper flex-shrink-0 stripes p-2">
+                    <div className="w-20 h-20 bg-cream flex-shrink-0 p-2 border border-ink/10">
                       <img
                         src={resolveImg(item.image)}
                         alt={item.name}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain product-img"
                       />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -786,30 +845,14 @@ function Footer() {
   return (
     <footer id="contact" className="bg-ink text-cream mt-32">
       <div className="px-4 sm:px-8 lg:px-16 max-w-[1600px] mx-auto py-20">
-        <div className="grid grid-cols-12 gap-8">
-          <div className="col-span-12 lg:col-span-7">
-            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cream/50 mb-6">
-              — Une dernière chose
-            </p>
-            <h2 className="text-display text-6xl sm:text-7xl lg:text-8xl leading-[0.9]">
-              Parlons<br />
-              <em className="italic text-terracotta">ensemble.</em>
-            </h2>
-          </div>
-          <div className="col-span-12 lg:col-span-5 flex flex-col justify-end">
-            <div className="space-y-2 font-mono text-sm">
-              <p className="text-cream/60 uppercase text-[10px] tracking-widest mb-3">Contact</p>
-              <a href="mailto:contact@atelier.com" className="block hover:text-terracotta transition-colors">
-                contact@atelier.com
-              </a>
-              <a href="tel:+33000000000" className="block hover:text-terracotta transition-colors">
-                +33 0 00 00 00 00
-              </a>
-              <p className="text-cream/60 pt-4">
-                Toulon, France
-              </p>
-            </div>
-          </div>
+        <div className="text-center">
+          <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cream/50 mb-6">
+            — Une dernière chose
+          </p>
+          <h2 className="text-display text-6xl sm:text-7xl lg:text-8xl leading-[0.9]">
+            Parlons<br />
+            <em className="italic text-terracotta">ensemble.</em>
+          </h2>
         </div>
 
         <div className="border-t border-cream/20 mt-20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[10px] uppercase tracking-widest text-cream/50">

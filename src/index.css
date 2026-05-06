@@ -85,6 +85,12 @@
     transform: scale(1.05) rotate(-1deg);
   }
 
+  /* Detourage : fond blanc des produits fondu sur le fond crème */
+  .product-img {
+    mix-blend-mode: multiply;
+    filter: contrast(1.02);
+  }
+
   /* Diagonal stripes pattern */
   .stripes {
     background-image: repeating-linear-gradient(
